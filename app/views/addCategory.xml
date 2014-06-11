@@ -1,0 +1,14 @@
+<Alloy>
+	<Window id='win' class="container">
+		<ScrollView class='container' layout='vertical' backgroundColor='#DDD'>
+		<View backgroundColor='#000' height='40dp' bottom='30dp'>
+			<Label text='Ajouter un produit' color='#FFF'/>
+			<Button image='bt_close.png' width='20dp' height='20dp' right='5dp' color='#FFF' onClick='closePage' tintColor='#FFF'/>
+		</View>
+		
+		<TextField id='nom' class='form_input' hintText='Entrer le nom'>
+
+		<Button class='form_button' title='Ajouter' top='20dp' color='#000' onClick='addProduct' bottom='20dp'/>
+		</ScrollView>
+	</Window>
+</Alloy>

@@ -1,0 +1,23 @@
+<Alloy>
+	<Window id='win' class="container">
+		<ScrollView class='container' layout='vertical' backgroundColor='#DDD'>
+		<View backgroundColor='#000' height='40dp' bottom='30dp'>
+			<Label text='Ajouter un produit' color='#FFF'/>
+			<Button image='bt_close.png' width='20dp' height='20dp' right='5dp' color='#FFF' onClick='closePage' tintColor='#FFF'/>
+		</View>
+		<View width='Ti.UI.FILL' height='100dp' left='20dp'>
+			<ImageView id='thumb' left='0dp' width='100dp' height='100dp' backgroundColor='#FFF' borderRadius='4' onClick='openGallery' >
+			<ActivityIndicator id='ind' left='0dp' width='100dp' height='100dp' style = 'Ti.UI.iPhone.ActivityIndicatorStyle.DARK' backgroundColor='transparent'>
+				<View layout='vertical' left='100dp' right='0dp'>
+					<TextField id='ref' class='form_input' hintText='Entrer la référence' top='0dp'>
+					<TextField id='nom' class='form_input' hintText='Entrer le nom'>
+					<TextField id='prix' class='form_input' hintText='Entrer le prix'>
+				</View>
+		</View>
+		
+		<TextArea id='description' class='form_input'  height='200dp' suppressReturn='false' top='20dp'>
+		<Button id='bt_cat' class='form_button' title='Choisir la catégorie' top='20dp' color='#000' onClick='openCategory' bottom='20dp'/>
+		<Button class='form_button' title='Ajouter' top='20dp' color='#000' onClick='addProduct' bottom='20dp'/>
+		</ScrollView>
+	</Window>
+</Alloy>

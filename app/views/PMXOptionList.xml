@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id='window' class='container' backgroundColor='#FFF' height='Ti.UI.FILL' width='Ti.UI.FILL'>
+		<TableView id='tableview' backgroundColor='transparent'/>
+	</Window>
+</Alloy>

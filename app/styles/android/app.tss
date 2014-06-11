@@ -1,0 +1,139 @@
+//COULEUR ROUGE POUR L'APP'
+// cc1c27
+
+".app_button" : {
+
+	backgroundColor: "transparent",
+	font:{fontSize:16}
+}
+".container": {
+	backgroundColor:"#FFF",
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL,
+	fullscreen:true,
+	navBarHidden:true,
+	top:0
+}
+
+".form_input" : {
+	left: '20dp',
+	right:'20dp',
+	borderRadius: 4,
+	height: '30dp',
+	backgroundColor: "#EEE",
+	top:'5dp',
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	paddingLeft:'10dp',
+	paddingRight:'10dp',
+	font:{fontSize:12}
+}
+
+".form_modif" : {
+	left: '10dp',
+	right:'20dp',
+	height: '40dp',
+	backgroundColor: "transparent",
+	top:'0dp',
+	paddingLeft:'0dp',
+	paddingRight:'0dp',
+	font:{fontSize:'16sp'}
+}
+
+".form_button" : {
+	left: '20dp',
+	right:'20dp',
+	borderRadius: 4,
+	height: '30dp',
+	backgroundColor: "#BBB",
+	top:'10dp',
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	paddingLeft:'10dp',
+	paddingRight:'10dp',
+	font:{fontSize:16}
+}
+
+
+'.voucher_row':{
+	borderColor:'transparent',
+	borderWidth:'0dp',
+	height:"80dp",
+	hasChild:"true",
+	className:"rowvoucher",
+	backgroundColor:"#FFF",
+	selectedBackgroundColor:"#666666",
+	borderWidth:'0dp',
+	borderColor:'#FFF'
+}
+
+'.voucher_row_title':{
+	color:'#000',
+	left:"0dp",
+	right:'20dp',
+	top:"12dp",
+	height:'25dp',
+	touchEnabled:false,
+	backgroundColor:"transparent",
+	font:{fontSize:18,fontFamily:'HelveticaNeue-Light'}
+}
+
+'.voucher_row_ref':{
+	color:'#575757',
+	left:"0dp",
+	right:'0dp',
+	backgroundColor:'transparent',
+	height:'20dp',
+	touchEnabled:false,
+	font:{fontSize:12},
+	backgroundColor:"transparent",
+}
+
+'.voucher_row_prix':{
+	color:'#575757',
+	left:"5dp",
+	right:'0dp',
+	backgroundColor:'transparent',
+	height:'20dp',
+	touchEnabled:false,
+	font:{fontSize:12},
+	backgroundColor:"transparent",
+}
+
+'.voucher_row_date':{
+	color:'#575757',
+	left:"0dp",
+	right:'25dp',
+	top:"-3dp",
+	height:'20dp',
+	touchEnabled:false,
+	font:{fontSize:10,fontFamily:'HelveticaNeue-Light'},
+	backgroundColor:"transparent",
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//PROFIL
+'.profil_row':{
+	borderColor:'transparent',
+	borderWidth:'0dp',
+	height:"60dp",
+	hasChild:"true",
+	className:"rowprofil",
+	backgroundColor:"#FFF",
+	selectedBackgroundColor:"#ebebeb"
+}
+
+'.profil_row_title':{
+	color:'#575757',
+	left:"20dp",
+	height:'50dp',
+	touchEnabled:false,
+	font:{fontSize: '18sp'}
+}
+
+'.profil_row_info':{
+	right:"20dp",
+	color:"#cc1c27",
+	//top:"2dp",
+	touchEnabled:false,
+	font:{fontSize: '15sp'}
+}
+

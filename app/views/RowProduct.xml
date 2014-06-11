@@ -1,0 +1,22 @@
+<Alloy>
+	<TableViewRow id='row' class='voucher_row' backgroundColor='transparent' hasCheck='false' hasChild='false' layout='horizontal'>
+		
+		
+			<View id='pic_img' left='15dp' width='Ti.UI.SIZE' layout='vertical' right='10dp' backgroundColor='transparent' touchEnabled='false'>
+				<ImageView height='65dp' id="pic" top='6dp' left='0dp' width='65dp' height='65dp' borderRadius='4' backgroundColor='transparent' touchEnabled='false' />
+	
+			</View>
+	
+			<View layout='vertical' width='Ti.UI.FILL'  backgroundColor='transparent' top='0dp' touchEnabled='false'>
+				<View layout='horizontal' top='0dp' height='20dp' backgroundColor='transparent' touchEnabled='false'>
+					<Label id="ref" color='orange' class='voucher_row_ref' touchEnabled='false'/>	
+					<Label id="prix" color='orange' class='voucher_row_prix' touchEnabled='false'/>
+				</View>
+				<Label id="title" class='voucher_row_title' touchEnabled='false'/>
+				<Label id="date" class='voucher_row_date' touchEnabled='false'/>	
+				
+			</View>
+		
+	
+	</TableViewRow>
+</Alloy>

@@ -1,0 +1,4 @@
+<Alloy>
+	<Window class='container' id='window' width='Ti.UI.FILL' height='Ti.UI.FILL' backgroundColor='#90000000'>
+	</Window>
+</Alloy>

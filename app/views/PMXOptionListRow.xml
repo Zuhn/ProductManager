@@ -1,0 +1,7 @@
+<Alloy>
+	<TableViewRow id='row' class='profil_row' >
+			<!--<ImageView id="pic" class="voucher_row_image"/>-->
+			<Label id="mytitle" class='profil_row_title'/>
+			<Label id="info" class='profil_row_info'/>	
+	</TableViewRow>
+</Alloy>

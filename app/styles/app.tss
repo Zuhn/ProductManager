@@ -1,0 +1,92 @@
+".container": {
+	backgroundColor:"#FFF",
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL,
+	fullscreen:true,
+	top:0
+}
+
+".v_form" : {
+	height:'30dp',
+	left: '20dp',
+	right:'20dp',
+	layout:'horizontal'
+}
+
+".form_input" : {
+	left: '20dp',
+	right:'20dp',
+	borderRadius: 4,
+	height: '30dp',
+	backgroundColor: "#EEE",
+	top:'5dp',
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	paddingLeft:'10dp',
+	paddingRight:'10dp',
+	font:{fontSize:12}
+}
+
+".form_modif" : {
+	left: '20dp',
+	right:'20dp',
+	height: '30dp',
+	backgroundColor: "transparent",
+	top:'0dp',
+	paddingLeft:'0dp',
+	paddingRight:'0dp',
+	font:{fontSize:16}
+}
+
+".form_button" : {
+	left: '20dp',
+	right:'20dp',
+	borderRadius: 4,
+	height: '30dp',
+	backgroundColor: "#BBB",
+	top:'10dp',
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	paddingLeft:'10dp',
+	paddingRight:'10dp',
+	font:{fontSize:16}
+}
+
+
+'.voucher_row':{
+	borderColor:'transparent',
+	borderWidth:'0dp',
+	height:"70dp",
+	hasChild:"true",
+	className:"rowvoucher",
+	backgroundColor:"#FFF",
+	selectedBackgroundColor:"#666666",
+	borderWidth:'0dp',
+	borderColor:'#FFF'
+}
+
+'.voucher_row_title':{
+	left:"25dp",
+	right:'20dp',
+	top:"10dp",
+	touchEnabled:false,
+	font:{fontSize:15,fontFamily:'HelveticaNeue-Light'}
+}
+
+'.voucher_row_ref':{
+	color:'#575757',
+	left:"0dp",
+	right:'0dp',
+	top:"2dp",
+	width:'80dp',
+	height:'20dp',
+	touchEnabled:false,
+	font:{fontSize:8}
+}
+
+'.voucher_row_date':{
+	color:'#575757',
+	left:"25dp",
+	right:'25dp',
+	top:"2dp",
+	touchEnabled:false,
+	font:{fontSize:12,fontFamily:'HelveticaNeue-Light'}
+}

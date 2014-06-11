@@ -1,0 +1,14 @@
+<Alloy>
+	<Window class="container">
+		<ImageView image='logo.png'/>
+		<View layout='vertical'>
+			<View height='40dp' top='0dp' left='0dp' right='0dp' layout='horizontal' backgroundColor='#666666'>
+				<Button class='app_button' onClick='openAddProduct' title='+ Ajouter un produit' height='Ti.UI.SIZE' left='5dp' top='5dp' color='#FFF'/>
+			</View>
+			<View height='40dp' top='0dp' left='0dp' right='0dp' layout='horizontal' backgroundColor='#666666'>
+				<Button class='app_button' onClick='openAddCategory' title='+ Ajouter une catégorie' height='Ti.UI.SIZE' left='5dp' top='5dp' color='#FFF'/>
+			</View>
+			<TableView id="tableview" top="5dp" bottom='0dp' left='0dp' right='0dp' backgroundColor="transparent"/>
+		</View>
+	</Window>
+</Alloy>
