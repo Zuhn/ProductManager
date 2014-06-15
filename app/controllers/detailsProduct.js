@@ -4,7 +4,16 @@ var datas = args.datas;
 var img = datas.photo;
 var cat = datas.category;
 var timeStamp;
-$.win.addEventListener('open', function(){
+
+$.win.addEventListener('click',function(e){
+	$.ref.blur();
+	$.nom.blur();
+	$.prix.blur();
+	$.description.blur();
+	
+});
+
+//$.win.addEventListener('open', function(){
 	if(img != undefined && img != 'undefined')
 		$.thumb.image = Titanium.Filesystem.getFile(Titanium.Filesystem.applicationDataDirectory, datas.photo+ ".jpeg");
 	else
@@ -13,11 +22,11 @@ $.win.addEventListener('open', function(){
 		$.thumb.image = 'logo.png';
 	}
 	
-	$.ref.value = datas.ref;
+	//$.ref.value = datas.ref;
 	$.nom.value = datas.nom;
 	$.prix.value = datas.price;
 	$.description.value = datas.description;
-});
+//});
 $.ref.addEventListener('focus', function f(e){
     $.ref.blur();
     $.ref.removeEventListener('focus', f);
@@ -39,9 +48,11 @@ function openGallery()
 
 function displayImage(_img, _big)
 {
+	$.thumb.addEventListener('load',displayContent);
 	$.ind.hide();
 	if(_big != null)
 	{
+		
 		$.thumb.image = _big;
 		img = timeStamp;
 	}
@@ -78,3 +89,145 @@ function addProduct()
 	Ti.App.fireEvent('reloadList');
 	$.win.close({modal:true});
 }
+
+
+
+$.thumb.addEventListener('load',displayContent);
+function displayContent(){
+	if(ini_record == false)
+	{
+		ini_record = true;
+	$.thumb.removeEventListener('load',displayContent);
+	$.v_nom.top=$.thumb.toImage().height;
+	var v1 = $.thumb.toImage().height+$.v_nom.toImage().height;
+	var v1h = $.v_info.toImage().height;
+	var v2h = $.v_stock.toImage().height;
+	$.v_info.top=v1;
+	$.v_info.height='40dp';
+	var v2 = $.thumb.toImage().height+$.v_nom.toImage().height+$.v_info.toImage().height;
+	$.v_stock.top=v2;	
+	$.v_stock.height='40dp';
+	
+		recordMenu($.v_info,v1h,$.thumb.toImage().height,v1);
+		recordMenu($.v_stock,v2h,$.thumb.toImage().height,v2);
+	}
+	
+}
+var ini_record = false;
+var tab_ini_top=[];	
+var tab_onglet=[];
+var tab_v_height=[];
+var tab_close_height=[];
+var menu_speed = 500;
+var c_menu = null;
+function recordMenu(_v,_height,_close_height,_ini_top)
+{
+
+	_v.addEventListener('click', openOnglet);
+	var h = _height;
+	tab_onglet.push(_v);
+	tab_ini_top.push(_ini_top);
+	tab_v_height.push(h);
+	tab_close_height = _close_height;
+}
+function openOnglet(e)
+{
+
+	var _id = e.source.myid;
+	for(var i=0; i< tab_onglet.length; i++)
+	{
+		var view_action = tab_onglet[i];
+		
+		if(c_menu == _id)
+		{
+			
+			
+			if(_id==i)
+			{
+				var h = '40dp';
+				var animation1 = Titanium.UI.createAnimation();
+				animation1.height = h;
+
+				animation1.duration = menu_speed;
+				animation1.delay=20;
+	
+				view_action.animate(animation1);
+			}
+			else
+			{
+				var h = tab_ini_top[i];
+				var animation = Titanium.UI.createAnimation();
+				animation.top = h;
+				animation.duration = menu_speed;
+				animation.delay=0;
+	
+				view_action.animate(animation);
+				
+				}
+
+		}
+		else
+		{
+		
+			if(_id >= i)
+			{
+				var h = tab_ini_top[i];
+				var animation = Titanium.UI.createAnimation();
+				animation.top = h;
+				animation.duration = menu_speed;
+				animation.delay=0;
+	
+				view_action.animate(animation);
+			}
+			if(_id < i)
+			{
+				var h = tab_ini_top[i]+tab_v_height[_id];
+				var animation = Titanium.UI.createAnimation();
+				animation.top = h;
+				animation.duration = menu_speed;
+				animation.delay=10;
+	
+				view_action.animate(animation);
+			}
+			if(_id==i)
+			{
+				var h = tab_v_height[i];
+				var animation = Titanium.UI.createAnimation();
+				animation.height = h;
+				animation.duration = menu_speed;
+				animation.delay=0;
+	
+				view_action.animate(animation);
+			}
+			else{
+				var h = '40dp';
+				var animation = Titanium.UI.createAnimation();
+				animation.height = h;
+				animation.duration = menu_speed;
+				animation.delay=0;
+	
+				view_action.animate(animation);
+			}
+			
+		}
+		
+	}
+	if(c_menu == _id)
+			c_menu = null;
+		else
+			c_menu = _id;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

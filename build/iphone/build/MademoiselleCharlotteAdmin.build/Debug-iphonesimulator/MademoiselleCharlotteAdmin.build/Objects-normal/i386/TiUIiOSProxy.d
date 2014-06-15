@@ -1,0 +1,60 @@
+dependencies: \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSProxy.m \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiBase.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiThreading.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiPublicAPI.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiEvaluator.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/KrollContext.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/headers/TiCore/TiCore.h \
+  headers/TiCore/Ti.h headers/TiCore/TiBase.h \
+  headers/TiCore/TiContextRef.h headers/TiCore/TiObjectRef.h \
+  headers/TiCore/TiValueRef.h headers/TiCore/WebKitAvailability.h \
+  headers/TiCore/TiStringRef.h headers/TiCore/TiStringRefCF.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/headers/TiCore/TiContextRefPrivate.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/KrollCallback.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/KrollObject.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiBindingRunLoop.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSAdViewProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIViewProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiViewProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIView.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiAnimation.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiPoint.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiDimension.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiColor.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/ListenerEntry.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiModule.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUtils.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/WebFont.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiFile.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiBuffer.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiBlob.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/LayoutConstraint.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiGradient.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiRect.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiViewTemplate.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/Webcolor.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSTransitionAnimationProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSAttributedStringProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/Ti3DMatrix.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSCoverFlowViewProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSToolbarProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiToolbar.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSTabbedBarProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSDocumentViewerProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiUIiOSNavWindowProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiWindowProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiTab.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiTabGroup.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiViewController.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiControllerProtocols.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiAnimatorProxy.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiSnapBehavior.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiPushBehavior.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiGravityBehavior.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiAnchorAttachBehavior.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiViewAttachBehavior.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiCollisionBehavior.h \
+  /Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/iphone/Classes/TiDynamicItemBehavior.h

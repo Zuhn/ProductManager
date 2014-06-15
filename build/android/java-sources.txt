@@ -1,0 +1,6 @@
+"/Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/android/gen/ch/grafmiville/CHPseafood/ApplicationStylesheet.java"
+"/Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/android/gen/ch/grafmiville/CHPseafood/AssetCryptImpl.java"
+"/Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/android/gen/ch/grafmiville/CHPseafood/MademoisellecharlotteadminActivity.java"
+"/Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/android/gen/ch/grafmiville/CHPseafood/MademoisellecharlotteadminAppInfo.java"
+"/Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/android/gen/ch/grafmiville/CHPseafood/MademoisellecharlotteadminApplication.java"
+"/Users/zuhn/Titanium_Studio_Workspace/ProductManager/build/android/gen/ch/grafmiville/CHPseafood/R.java"

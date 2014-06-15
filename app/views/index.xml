@@ -1,14 +1,20 @@
+<!--    http://flaticons.net/ -->
 <Alloy>
-	<Window class="container">
-		<ImageView image='logo.png'/>
+	<Window class="container" >
 		<View layout='vertical'>
-			<View height='40dp' top='0dp' left='0dp' right='0dp' layout='horizontal' backgroundColor='#666666'>
-				<Button class='app_button' onClick='openAddProduct' title='+ Ajouter un produit' height='Ti.UI.SIZE' left='5dp' top='5dp' color='#FFF'/>
+			<View height='40dp' backgroundColor='#222' top='0dp' left='0dp' right='0dp'>
+				<Label class='title_page'text='PMX Product Manager v1.0' height='Ti.UI.SIZE'  color='#FFF'/>
 			</View>
-			<View height='40dp' top='0dp' left='0dp' right='0dp' layout='horizontal' backgroundColor='#666666'>
-				<Button class='app_button' onClick='openAddCategory' title='+ Ajouter une catégorie' height='Ti.UI.SIZE' left='5dp' top='5dp' color='#FFF'/>
+			<View height='40dp' top='0dp' left='0dp' right='0dp' layout='horizontal' backgroundColor='#30666666'>
+				<ImageView left='10dp' top='8dp' width='25dp' height='25dp'  image='icons/add_file.png'/>
+				<Button class='app_button' onClick='openAddProduct' title='Ajouter un produit' height='Ti.UI.SIZE' left='5dp' top='9dp' color='#FFF'/>
 			</View>
-			<TableView id="tableview" top="5dp" bottom='0dp' left='0dp' right='0dp' backgroundColor="transparent"/>
+			<View height='40dp' top='0dp' left='0dp' right='0dp' layout='horizontal' backgroundColor='#30666666'>
+				<ImageView left='10dp' top='8dp' width='25dp' height='25dp' image='icons/add_folder.png'/>
+				<Button class='app_button' onClick='openAddCategory' title='Ajouter une catégorie' height='Ti.UI.SIZE' left='5dp' top='8dp' color='#FFF'/>
+			</View>
+			<TableView class='tableview' id="tableview" top="0dp" bottom='0dp' left='0dp' right='0dp' backgroundColor="#222"/>
 		</View>
+		<ImageView id='v_loader' left='0dp' top='0dp' image='Default.png'/>
 	</Window>
 </Alloy>

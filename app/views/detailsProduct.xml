@@ -1,33 +1,45 @@
 <Alloy>
 	<Window id='win' class="container">
-		<ScrollView class='container' layout='vertical' backgroundColor='transparent'>
-			<View backgroundColor='#000' height='40dp' bottom='0dp'>
-				<Label text='Modifier un produit' color='#FFF'/>
+		<ScrollView id='scroll' class='container' backgroundColor='transparent' height='Ti.UI.FILL'>
+			<View backgroundColor='#222' height='40dp' top='0dp'>
+				<Label class='title_page'text='Modifier un produit' height='Ti.UI.SIZE'  color='#FFF'/>
 				<Button image='bt_close.png' width='20dp' height='20dp' right='5dp' color='#FFF' onClick='closePage' tintColor='#FFF'/>
 			</View>
-			<View height='Ti.UI.SIZE' top='0dp'>
+			<View height='Ti.UI.SIZE' top='40dp'>
 				<ImageView id='thumb' left='0dp' right='0dp' top='0dp' backgroundColor='#FFF' onClick='openGallery' defaultImage='logo.png'/>
 				<ActivityIndicator id='ind' top='0dp' left='0dp' right='0dp' height='100' style = 'Ti.UI.iPhone.ActivityIndicatorStyle.DARK' backgroundColor='transparent'>
 			</View>
-			<View class='v_form'>
-				<Label text='Référence : '>
-				<TextField id='ref' class='form_modif' hintText='Entrer la référence'>
-			</View>
-			<View class='v_form'>
-				<Label text='Nom : '>
+			<View id='v_nom' class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp'>
+				<Label text='Nom: ' class='label_modif'>
 				<TextField id='nom' class='form_modif' hintText='Entrer le nom'>
 			</View>
-			<View class='v_form'>
-				<Label text='Prix : '>
-				<TextField id='prix' class='form_modif' hintText='Entrer le prix'>
+			<View id='v_info'height='Ti.UI.SIZE' layout='vertical' top='0dp'>
+				<View backgroundColor='#222' height='40dp' top='0dp'  myid='0'>
+					<Label class='title_page' text='Infos' height='Ti.UI.SIZE'  color='#FFF'  touchEnabled='false'/>
+				</View>
+				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp'>
+					<Label text='Référence: ' class='label_modif'>
+					<TextField id='ref'  class='form_modif' hintText='Entrer la référence'>
+				</View>
+				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp'>
+					<Label text='Prix: ' class='label_modif'>
+					<TextField id='prix' class='form_modif' hintText='Entrer le prix'>
+				</View>
+				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp' height='Ti.UI.SIZE'>
+					<TextArea id='description' class='form_modif'  height='Ti.UI.SIZE' suppressReturn='false' top='0dp' left='4dp'>
+				</View>
+				<Button id='bt_cat' class='form_button' title='Choisir la catégorie'onClick='openCategory' top='20dp'/>
+				<Button class='form_button' title='Modifier' onClick='addProduct'/>
+				<Button class='form_button' title='Supprimer' onClick='deleteProduct' bottom='30dp'/>
 			</View>
-			
-			
-			<TextArea id='description' class='form_modif'  height='Ti.UI.SIZE' suppressReturn='false' top='0dp' left='10dp'>
-			<Button id='bt_cat' class='form_button' title='Choisir la catégorie' top='20dp' color='#000' onClick='openCategory' bottom='10dp'/>
-			<Button class='form_button' title='Modifier' top='10dp' color='#000' onClick='addProduct' bottom='10dp'/>
-			<Button class='form_button' title='Supprimer' top='10dp' color='#000' onClick='deleteProduct' bottom='10dp'/>
+			<View id='v_stock' height='Ti.UI.SIZE' layout='vertical' top='0dp'>
+				<View backgroundColor='#222' height='40dp' top='0dp'  myid='1'>
+					<Label class='title_page' text='Stock' height='Ti.UI.SIZE'  color='#FFF' touchEnabled='false'/>
+				</View>
+				<View backgroundColor='#F0f' height='300dp' top=0/>
+			</View>
 		</ScrollView>
 
+		
 	</Window>
 </Alloy>

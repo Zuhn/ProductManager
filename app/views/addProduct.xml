@@ -16,8 +16,8 @@
 		</View>
 		
 		<TextArea id='description' class='form_input'  height='200dp' suppressReturn='false' top='20dp'>
-		<Button id='bt_cat' class='form_button' title='Choisir la catégorie' top='20dp' color='#000' onClick='openCategory' bottom='20dp'/>
-		<Button class='form_button' title='Ajouter' top='20dp' color='#000' onClick='addProduct' bottom='20dp'/>
+		<Button id='bt_cat' class='form_button' title='Choisir la catégorie' onClick='openCategory'/>
+		<Button class='form_button' title='Ajouter' onClick='addProduct' bottom='30dp'/>
 		</ScrollView>
 	</Window>
 </Alloy>

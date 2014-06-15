@@ -7,6 +7,16 @@ $.ref.addEventListener('focus', function f(e){
     $.ref.blur();
     $.ref.removeEventListener('focus', f);
 });
+
+$.win.addEventListener('click',function(e){
+	$.ref.blur();
+	$.nom.blur();
+	$.prix.blur();
+	$.description.blur();
+	$.ref.value = '';
+	
+});
+
 function addProduct()
 {
 	DB.insert('charlotte','INSERT INTO jewelry (ref,nom,description,photo,price,category) VALUES ("'+$.ref.value+'","'+$.nom.value+'","'+$.description.value+'","'+img+'","'+$.prix.value+'","'+cat+'")');

@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "iphone",
+	"iosSdkPath": "/Users/zuhn/Library/Application Support/Titanium/mobilesdk/osx/3.2.3.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "b958a70",
+	"name": "MademoiselleCharlotteAdmin",
+	"id": "ch.grafmiville.CHPseafood",
+	"analytics": true,
+	"publisher": "zuhn",
+	"url": "http://",
+	"version": "1.2",
+	"description": "not specified",
+	"copyright": "2014 by zuhn",
+	"guid": "0a129deb-a71d-42dd-85cb-93c43fda152e",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}

@@ -1,9 +1,30 @@
 <Alloy>
-	<TableViewRow id='row' class='voucher_row' backgroundColor='transparent' hasCheck='false' hasChild='false' layout='horizontal'>
+	<TableViewRow id='row' class='voucher_row' backgroundColor='transparent' hasCheck='false' hasChild='false' layout='horizontal' height='Ti.UI.SIZE' >
+		<View layout='vertical' height='Ti.UI.SIZE'>
+			
+			<ScrollView id="crop" height="140dp" contentWidth="Ti.UI.FILL" contentHeight="auto" touchEnabled='false'>
+				<ImageView id='pic' top='-20dp' height='Ti.UI.SIZE'/>
+				<View backgroundColor='#50000000' height='30dp' top='110dp' >
+					<Label id="title" class='voucher_row_title' touchEnabled='false' color='#FFFFFF'/>
+				</View>
+			</ScrollView>
+			<View id='v_prix' layout='vertical' width='Ti.UI.FILL'  backgroundColor='transparent' top='0dp' touchEnabled='false' backgroundColor='#222'>
+				<View layout='horizontal' left='15dp' height='20dp' backgroundColor='transparent' touchEnabled='false' top='7dp'>
+					<Label id="ref" class='voucher_row_ref' touchEnabled='false' height='auto'/>	
+					<Label id="prix" class='voucher_row_prix' touchEnabled='false' height='auto'/>
+				</View>
+				
+				
+				
+			</View>
+			<View id='v_desc' height='Ti.UI.SIZE' backgroundColor='#222'>
+				<Label left='15dp' top='10dp' id="date" class='voucher_row_date' touchEnabled='false' height='100dp' height='auto' bottom='20dp'/>
+			</View>	
+		</View>
 		
-		
+		<!--
 			<View id='pic_img' left='15dp' width='Ti.UI.SIZE' layout='vertical' right='10dp' backgroundColor='transparent' touchEnabled='false'>
-				<ImageView height='65dp' id="pic" top='6dp' left='0dp' width='65dp' height='65dp' borderRadius='4' backgroundColor='transparent' touchEnabled='false' />
+				<ImageView id='pic' class='voucher_row_img'/>
 	
 			</View>
 	
@@ -16,6 +37,8 @@
 				<Label id="date" class='voucher_row_date' touchEnabled='false'/>	
 				
 			</View>
+			
+		-->
 		
 	
 	</TableViewRow>

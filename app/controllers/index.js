@@ -10,6 +10,7 @@ Alloy.Globals.DB = DB;
 
 
 
+
 $.index.addEventListener('open', function(){
 	if(!DB.dbExists('charlotte'))
 	{
@@ -92,18 +93,27 @@ function displayProduct()
 			last_category = tab_data[i].category;
 			
 			var headerView = Ti.UI.createView({
-				height: '30dp',
-				backgroundColor:'#FFF',
+				height: '50dp',
+				backgroundColor:'#222222',
 				head:getCategory(tab_data[i].category)
 			});
+			
+			var header_icon = Ti.UI.createImageView({
+				top:'1dp',
+				left:'10dp',
+				image:'icons/down.png',
+				height:'25dp',
+			});
+			
 			
 			headerTitle = Ti.UI.createLabel({
 				text: getCategory(tab_data[i].category),
 				classes:'voucher_row_header_title',
-				color:'#666666',
-				left:'20dp',
-				font:{fontSize:18,fontFamily:'HelveticaNeue-Light'},
-				touchEnabled:false
+				color:'#EEEEEE',
+				left:'15dp',
+				font:{fontSize:12,fontFamily:'Comfortaa-Bold'},
+				touchEnabled:false,
+				bottom:'8dp'
 			});
 			
 			var separatorView = Ti.UI.createView({
@@ -114,9 +124,9 @@ function displayProduct()
 				touchEnabled:false
 			});
 
-			
+			headerView.add(header_icon);
 			headerView.add(headerTitle);
-			headerView.add(separatorView);
+			//headerView.add(separatorView);
 			
 			sectionVeg = Ti.UI.createTableViewSection({ headerView: headerView });
 	    	rows.push(sectionVeg);
@@ -147,6 +157,16 @@ function displayProduct()
 
 	
 	Ti.App.fireEvent('PMXLoaderClose');
+	var animation = Titanium.UI.createAnimation();
+	animation.opacity = 0;
+	animation.duration = 1000;
+	animation.delay=1000;
+	var animationHandler = function() {
+	  animation.removeEventListener('complete',animationHandler);
+	  $.v_loader.visible = false;
+	};
+	animation.addEventListener('complete',animationHandler);
+	$.v_loader.animate(animation);
 	
 }
 
