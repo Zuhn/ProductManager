@@ -4,12 +4,13 @@ var datas = args.datas;
 var img = datas.photo;
 var cat = datas.category;
 var timeStamp;
-
+$.scroll.opacity = 0;
 $.win.addEventListener('click',function(e){
 	$.ref.blur();
 	$.nom.blur();
 	$.prix.blur();
 	$.description.blur();
+	$.c_stock.blur();
 	
 });
 
@@ -23,6 +24,9 @@ $.win.addEventListener('click',function(e){
 	}
 	
 	//$.ref.value = datas.ref;
+	if(datas.quantity == null)
+		datas.quantity = 0;
+	$.c_stock.value = datas.quantity;
 	$.nom.value = datas.nom;
 	$.prix.value = datas.price;
 	$.description.value = datas.description;
@@ -108,11 +112,22 @@ function displayContent(){
 	$.v_stock.top=v2;	
 	$.v_stock.height='40dp';
 	
-		recordMenu($.v_info,v1h,$.thumb.toImage().height,v1);
-		recordMenu($.v_stock,v2h,$.thumb.toImage().height,v2);
+		recordMenu($.bt_info,$.v_info,v1h,$.thumb.toImage().height,v1);
+		recordMenu($.bt_stock,$.v_stock,v2h,$.thumb.toImage().height,v2);
 	}
 	
+	var animation1 = Titanium.UI.createAnimation();
+		animation1.opacity = 1;
+	
+		animation1.duration = 500;
+		animation1.delay=200;
+	
+		$.scroll.animate(animation1);
+	
 }
+
+
+//PMXOngletManager
 var ini_record = false;
 var tab_ini_top=[];	
 var tab_onglet=[];
@@ -120,10 +135,10 @@ var tab_v_height=[];
 var tab_close_height=[];
 var menu_speed = 500;
 var c_menu = null;
-function recordMenu(_v,_height,_close_height,_ini_top)
+function recordMenu(_bt,_v,_height,_close_height,_ini_top)
 {
 
-	_v.addEventListener('click', openOnglet);
+	_bt.addEventListener('click', openOnglet);
 	var h = _height;
 	tab_onglet.push(_v);
 	tab_ini_top.push(_ini_top);
@@ -218,7 +233,37 @@ function openOnglet(e)
 			c_menu = _id;
 }
 
+//////////////////////////////////
+function addStock()
+{
+	var num = parseInt($.c_stock.value)+1;
+	setStock(num);
+}
 
+function removeStock()
+{
+	if(datas.quantity != 0)
+	{
+		var num = parseInt($.c_stock.value)-1;
+		setStock(num);
+	}
+}
+
+function setStock(_num)
+{
+	$.bt_save.enabled = true;
+	datas.quantity = _num;
+	$.c_stock.value = _num;
+}
+
+function saveStock()
+{
+	$.bt_save.enabled = false;
+	datas.quantity = parseInt($.c_stock.value);
+	DB.insert('charlotte','UPDATE jewelry SET quantity='+datas.quantity+' WHERE id='+datas.id);
+	Ti.App.fireEvent('reloadList');
+	
+}
 
 
 

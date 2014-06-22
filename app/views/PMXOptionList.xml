@@ -1,5 +1,9 @@
 <Alloy>
-	<Window id='window' class='container' backgroundColor='#FFF' height='Ti.UI.FILL' width='Ti.UI.FILL'>
+	<Window id='window' class='container' backgroundColor='#FFF' height='Ti.UI.FILL' width='Ti.UI.FILL' layout='vertical'>
+		<View backgroundColor='#222' height='40dp' top='0dp'>
+				<Label class='title_page'text='Sélection de la catégorie' height='Ti.UI.SIZE'  color='#FFF'/>
+				<Button image='bt_close.png' width='20dp' height='20dp' right='5dp' color='#FFF' onClick='closePage' tintColor='#FFF'/>
+			</View>
 		<TableView id='tableview' backgroundColor='transparent'/>
 	</Window>
 </Alloy>

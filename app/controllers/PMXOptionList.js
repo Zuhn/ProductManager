@@ -3,6 +3,7 @@ var args = arguments[0] || {};
 var tab_data = args.data;
 var ini_value = args.ini_value;
 var short_answer = args.short_answer;
+$.tableview.opacity = 0;
 /*
 $.window.title = args.title;
 var title_of_window = Titanium.UI.createLabel({
@@ -89,8 +90,18 @@ for (var i=0; i<=tab_data.length-1; i++)
 			row_c.ini(t.title);
   	tableData.push(row);
 }
-
+$.tableview.footerView = Ti.UI.createView({
+	    height: 1,
+	    backgroundColor: 'transparent'
+	});
 $.tableview.data = tableData;
+var animation1 = Titanium.UI.createAnimation();
+		animation1.opacity = 1;
+	
+		animation1.duration = 500;
+		animation1.delay=200;
+	
+		$.tableview.animate(animation1);
 });	
 
 
@@ -121,6 +132,10 @@ $.tableview.addEventListener('click', function(e)
 	$.window.close();
 });
 
+function closePage()
+{
+	$.window.close({modal:true});
+}
 
 
 

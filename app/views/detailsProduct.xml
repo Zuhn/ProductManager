@@ -14,29 +14,49 @@
 				<TextField id='nom' class='form_modif' hintText='Entrer le nom'>
 			</View>
 			<View id='v_info'height='Ti.UI.SIZE' layout='vertical' top='0dp'>
-				<View backgroundColor='#222' height='40dp' top='0dp'  myid='0'>
+				<!-- ONGLET INFO GESTION DU PRODUIT-->
+				<!-- BOUTON DE L'ONGLET -->
+				<View id='bt_info' backgroundColor='#222' height='40dp' top='0dp'  myid='0'>
 					<Label class='title_page' text='Infos' height='Ti.UI.SIZE'  color='#FFF'  touchEnabled='false'/>
 				</View>
 				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp'>
+					<!-- TEXTE REFERENCE -->
 					<Label text='Référence: ' class='label_modif'>
 					<TextField id='ref'  class='form_modif' hintText='Entrer la référence'>
 				</View>
 				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp'>
+					<!-- TEXTE PRIX -->
 					<Label text='Prix: ' class='label_modif'>
 					<TextField id='prix' class='form_modif' hintText='Entrer le prix'>
 				</View>
 				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp' height='Ti.UI.SIZE'>
-					<TextArea id='description' class='form_modif'  height='Ti.UI.SIZE' suppressReturn='false' top='0dp' left='4dp'>
+					<!-- TEXTE DESCRIPTION -->
+					<Label text='Description: ' class='label_modif' top='3dp'>
+					<TextArea id='description' class='form_modif'  height='Ti.UI.SIZE' suppressReturn='false' top='0dp' left='15dp'>
 				</View>
 				<Button id='bt_cat' class='form_button' title='Choisir la catégorie'onClick='openCategory' top='20dp'/>
+				<!-- BOUTON MODIFIER -->
 				<Button class='form_button' title='Modifier' onClick='addProduct'/>
+				<!-- BOUTOTN SUPPRIMER -->
 				<Button class='form_button' title='Supprimer' onClick='deleteProduct' bottom='30dp'/>
 			</View>
 			<View id='v_stock' height='Ti.UI.SIZE' layout='vertical' top='0dp'>
-				<View backgroundColor='#222' height='40dp' top='0dp'  myid='1'>
+				<View id='bt_stock' backgroundColor='#222' height='40dp' top='0dp'  myid='1'>
 					<Label class='title_page' text='Stock' height='Ti.UI.SIZE'  color='#FFF' touchEnabled='false'/>
 				</View>
-				<View backgroundColor='#F0f' height='300dp' top=0/>
+				<!-- ONGLET GESTION DU STOCK-->
+				<View class='v_form' borderRadius='0' backgroundColor='#222222' top='0dp'>
+					<!-- TEXTE STOCK ACTUEL -->
+					<Label text='Stock actuel: ' class='label_modif'width='130dp'/>
+					<TextField keyboardType="Titanium.UI.KEYBOARD_NUMBER_PAD" id='c_stock' class='form_modif'/>
+				</View>
+				<WebView id='graph1' width='Ti.UI.FILL' height='200dp' url='charts/index.htm'/>
+				<!-- BOUTON AJOUTER AU STOCK -->
+				<Button class='form_button' title='Ajouter' onClick='addStock'/>
+				<!-- BOUTON SUPPRIMER DU STOCK -->
+				<Button class='form_button' title='Retirer' onClick='removeStock'/>
+				<!-- BOUTON SAVER LE STOCK -->
+				<Button id='bt_save' class='form_button' title='Enregistrer le stock' onClick='saveStock' enabled="false" disabledColor='#444444'/>
 			</View>
 		</ScrollView>
 

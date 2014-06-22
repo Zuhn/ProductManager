@@ -29,7 +29,7 @@ function Controller() {
         id: "win"
     });
     $.__views.win && $.addTopLevelView($.__views.win);
-    $.__views.__alloyId3 = Ti.UI.createScrollView({
+    $.__views.__alloyId6 = Ti.UI.createScrollView({
         backgroundImage: "bg1.jpg",
         backgroundColor: "#DDD",
         height: Ti.UI.FILL,
@@ -37,33 +37,33 @@ function Controller() {
         fullscreen: true,
         top: 0,
         layout: "vertical",
-        id: "__alloyId3"
+        id: "__alloyId6"
     });
-    $.__views.win.add($.__views.__alloyId3);
-    $.__views.__alloyId4 = Ti.UI.createView({
+    $.__views.win.add($.__views.__alloyId6);
+    $.__views.__alloyId7 = Ti.UI.createView({
         backgroundColor: "#000",
         height: "40dp",
         bottom: "30dp",
-        id: "__alloyId4"
+        id: "__alloyId7"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId4);
-    $.__views.__alloyId5 = Ti.UI.createLabel({
+    $.__views.__alloyId6.add($.__views.__alloyId7);
+    $.__views.__alloyId8 = Ti.UI.createLabel({
         text: "Ajouter un produit",
         color: "#FFF",
-        id: "__alloyId5"
+        id: "__alloyId8"
     });
-    $.__views.__alloyId4.add($.__views.__alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createButton({
+    $.__views.__alloyId7.add($.__views.__alloyId8);
+    $.__views.__alloyId9 = Ti.UI.createButton({
         image: "bt_close.png",
         width: "20dp",
         height: "20dp",
         right: "5dp",
         color: "#FFF",
         tintColor: "#FFF",
-        id: "__alloyId6"
+        id: "__alloyId9"
     });
-    $.__views.__alloyId4.add($.__views.__alloyId6);
-    closePage ? $.__views.__alloyId6.addEventListener("click", closePage) : __defers["$.__views.__alloyId6!click!closePage"] = true;
+    $.__views.__alloyId7.add($.__views.__alloyId9);
+    closePage ? $.__views.__alloyId9.addEventListener("click", closePage) : __defers["$.__views.__alloyId9!click!closePage"] = true;
     $.__views.nom = Ti.UI.createTextField({
         left: "20dp",
         right: "20dp",
@@ -82,8 +82,8 @@ function Controller() {
         id: "nom",
         hintText: "Entrer le nom"
     });
-    $.__views.__alloyId3.add($.__views.nom);
-    $.__views.__alloyId7 = Ti.UI.createButton({
+    $.__views.__alloyId6.add($.__views.nom);
+    $.__views.__alloyId10 = Ti.UI.createButton({
         color: "#000",
         left: "20dp",
         right: "20dp",
@@ -100,16 +100,16 @@ function Controller() {
         },
         title: "Ajouter",
         bottom: "20dp",
-        id: "__alloyId7"
+        id: "__alloyId10"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId7);
-    addProduct ? $.__views.__alloyId7.addEventListener("click", addProduct) : __defers["$.__views.__alloyId7!click!addProduct"] = true;
+    $.__views.__alloyId6.add($.__views.__alloyId10);
+    addProduct ? $.__views.__alloyId10.addEventListener("click", addProduct) : __defers["$.__views.__alloyId10!click!addProduct"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
     var DB = Alloy.Globals.DB;
-    __defers["$.__views.__alloyId6!click!closePage"] && $.__views.__alloyId6.addEventListener("click", closePage);
-    __defers["$.__views.__alloyId7!click!addProduct"] && $.__views.__alloyId7.addEventListener("click", addProduct);
+    __defers["$.__views.__alloyId9!click!closePage"] && $.__views.__alloyId9.addEventListener("click", closePage);
+    __defers["$.__views.__alloyId10!click!addProduct"] && $.__views.__alloyId10.addEventListener("click", addProduct);
     _.extend($, exports);
 }
 

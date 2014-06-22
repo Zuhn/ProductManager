@@ -137,3 +137,31 @@
 	touchEnabled:false,
 	font:{fontSize:12,fontFamily:'Comfortaa'}
 }
+
+//////////////////////////////////////////////////////////////////////////////////////
+//PROFIL
+'.profil_row':{
+	borderColor:'transparent',
+	borderWidth:'0dp',
+	height:"60dp",
+	hasChild:"true",
+	className:"rowprofil",
+	backgroundColor:"#FFF",
+	selectedBackgroundColor:"#ebebeb"
+}
+
+'.profil_row_title':{
+	left:"20dp",
+	//top:"7dp",
+	touchEnabled:false,
+	font:{fontSize:12,fontFamily:'Comfortaa',fontWeight:'Bold'}
+}
+
+'.profil_row_info':{
+	right:"0dp",
+	color:"#cc1c27",
+	//top:"2dp",
+	touchEnabled:false,
+	font:{fontSize:12,fontFamily:'Comfortaa',fontWeight:'Bold'}
+}
+

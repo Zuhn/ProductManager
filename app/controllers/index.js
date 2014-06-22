@@ -94,7 +94,7 @@ function displayProduct()
 			
 			var headerView = Ti.UI.createView({
 				height: '50dp',
-				backgroundColor:'#222222',
+				backgroundColor:'#000',
 				head:getCategory(tab_data[i].category)
 			});
 			

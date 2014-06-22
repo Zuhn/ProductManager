@@ -49,7 +49,7 @@ function Controller() {
                 last_category = tab_data[i].category;
                 var headerView = Ti.UI.createView({
                     height: "50dp",
-                    backgroundColor: "#222222",
+                    backgroundColor: "#000",
                     head: getCategory(tab_data[i].category)
                 });
                 var header_icon = Ti.UI.createImageView({
@@ -127,21 +127,21 @@ function Controller() {
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.__alloyId32 = Ti.UI.createView({
+    $.__views.__alloyId37 = Ti.UI.createView({
         layout: "vertical",
-        id: "__alloyId32"
+        id: "__alloyId37"
     });
-    $.__views.index.add($.__views.__alloyId32);
-    $.__views.__alloyId33 = Ti.UI.createView({
+    $.__views.index.add($.__views.__alloyId37);
+    $.__views.__alloyId38 = Ti.UI.createView({
         height: "40dp",
         backgroundColor: "#222",
         top: "0dp",
         left: "0dp",
         right: "0dp",
-        id: "__alloyId33"
+        id: "__alloyId38"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId33);
-    $.__views.__alloyId34 = Ti.UI.createLabel({
+    $.__views.__alloyId37.add($.__views.__alloyId38);
+    $.__views.__alloyId39 = Ti.UI.createLabel({
         font: {
             fontSize: 12,
             fontFamily: "Comfortaa",
@@ -150,29 +150,29 @@ function Controller() {
         text: "PMX Product Manager v1.0",
         height: Ti.UI.SIZE,
         color: "#FFF",
-        id: "__alloyId34"
+        id: "__alloyId39"
     });
-    $.__views.__alloyId33.add($.__views.__alloyId34);
-    $.__views.__alloyId35 = Ti.UI.createView({
+    $.__views.__alloyId38.add($.__views.__alloyId39);
+    $.__views.__alloyId40 = Ti.UI.createView({
         height: "40dp",
         top: "0dp",
         left: "0dp",
         right: "0dp",
         layout: "horizontal",
         backgroundColor: "#30666666",
-        id: "__alloyId35"
+        id: "__alloyId40"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId35);
-    $.__views.__alloyId36 = Ti.UI.createImageView({
+    $.__views.__alloyId37.add($.__views.__alloyId40);
+    $.__views.__alloyId41 = Ti.UI.createImageView({
         left: "10dp",
         top: "8dp",
         width: "25dp",
         height: "25dp",
         image: "icons/add_file.png",
-        id: "__alloyId36"
+        id: "__alloyId41"
     });
-    $.__views.__alloyId35.add($.__views.__alloyId36);
-    $.__views.__alloyId37 = Ti.UI.createButton({
+    $.__views.__alloyId40.add($.__views.__alloyId41);
+    $.__views.__alloyId42 = Ti.UI.createButton({
         font: {
             fontFamily: "Comfortaa"
         },
@@ -181,30 +181,30 @@ function Controller() {
         left: "5dp",
         top: "9dp",
         color: "#FFF",
-        id: "__alloyId37"
+        id: "__alloyId42"
     });
-    $.__views.__alloyId35.add($.__views.__alloyId37);
-    openAddProduct ? $.__views.__alloyId37.addEventListener("click", openAddProduct) : __defers["$.__views.__alloyId37!click!openAddProduct"] = true;
-    $.__views.__alloyId38 = Ti.UI.createView({
+    $.__views.__alloyId40.add($.__views.__alloyId42);
+    openAddProduct ? $.__views.__alloyId42.addEventListener("click", openAddProduct) : __defers["$.__views.__alloyId42!click!openAddProduct"] = true;
+    $.__views.__alloyId43 = Ti.UI.createView({
         height: "40dp",
         top: "0dp",
         left: "0dp",
         right: "0dp",
         layout: "horizontal",
         backgroundColor: "#30666666",
-        id: "__alloyId38"
+        id: "__alloyId43"
     });
-    $.__views.__alloyId32.add($.__views.__alloyId38);
-    $.__views.__alloyId39 = Ti.UI.createImageView({
+    $.__views.__alloyId37.add($.__views.__alloyId43);
+    $.__views.__alloyId44 = Ti.UI.createImageView({
         left: "10dp",
         top: "8dp",
         width: "25dp",
         height: "25dp",
         image: "icons/add_folder.png",
-        id: "__alloyId39"
+        id: "__alloyId44"
     });
-    $.__views.__alloyId38.add($.__views.__alloyId39);
-    $.__views.__alloyId40 = Ti.UI.createButton({
+    $.__views.__alloyId43.add($.__views.__alloyId44);
+    $.__views.__alloyId45 = Ti.UI.createButton({
         font: {
             fontFamily: "Comfortaa"
         },
@@ -213,10 +213,10 @@ function Controller() {
         left: "5dp",
         top: "8dp",
         color: "#FFF",
-        id: "__alloyId40"
+        id: "__alloyId45"
     });
-    $.__views.__alloyId38.add($.__views.__alloyId40);
-    openAddCategory ? $.__views.__alloyId40.addEventListener("click", openAddCategory) : __defers["$.__views.__alloyId40!click!openAddCategory"] = true;
+    $.__views.__alloyId43.add($.__views.__alloyId45);
+    openAddCategory ? $.__views.__alloyId45.addEventListener("click", openAddCategory) : __defers["$.__views.__alloyId45!click!openAddCategory"] = true;
     $.__views.tableview = Ti.UI.createTableView({
         separatorColor: "transparent",
         borderColor: "transparent",
@@ -227,7 +227,7 @@ function Controller() {
         right: "0dp",
         backgroundColor: "#222"
     });
-    $.__views.__alloyId32.add($.__views.tableview);
+    $.__views.__alloyId37.add($.__views.tableview);
     $.__views.v_loader = Ti.UI.createImageView({
         id: "v_loader",
         left: "0dp",
@@ -256,8 +256,8 @@ function Controller() {
     Ti.App.addEventListener("reloadList", displayProduct);
     Ti.App.addEventListener("reloadCategory", setCategory);
     $.index.open();
-    __defers["$.__views.__alloyId37!click!openAddProduct"] && $.__views.__alloyId37.addEventListener("click", openAddProduct);
-    __defers["$.__views.__alloyId40!click!openAddCategory"] && $.__views.__alloyId40.addEventListener("click", openAddCategory);
+    __defers["$.__views.__alloyId42!click!openAddProduct"] && $.__views.__alloyId42.addEventListener("click", openAddProduct);
+    __defers["$.__views.__alloyId45!click!openAddCategory"] && $.__views.__alloyId45.addEventListener("click", openAddCategory);
     _.extend($, exports);
 }
 

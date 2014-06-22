@@ -7,14 +7,36 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.row = Ti.UI.createTableViewRow({
+        borderColor: "transparent",
+        borderWidth: "0dp",
+        height: "60dp",
+        hasChild: "true",
+        className: "rowprofil",
+        backgroundColor: "#FFF",
+        selectedBackgroundColor: "#ebebeb",
         id: "row"
     });
     $.__views.row && $.addTopLevelView($.__views.row);
     $.__views.mytitle = Ti.UI.createLabel({
+        left: "20dp",
+        touchEnabled: false,
+        font: {
+            fontSize: 12,
+            fontFamily: "Comfortaa",
+            fontWeight: "Bold"
+        },
         id: "mytitle"
     });
     $.__views.row.add($.__views.mytitle);
     $.__views.info = Ti.UI.createLabel({
+        right: "0dp",
+        color: "#cc1c27",
+        touchEnabled: false,
+        font: {
+            fontSize: 12,
+            fontFamily: "Comfortaa",
+            fontWeight: "Bold"
+        },
         id: "info"
     });
     $.__views.row.add($.__views.info);

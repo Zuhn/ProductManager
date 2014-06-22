@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>ch.grafmiville.CHPseafood</id>
     <name>MademoiselleCharlotteAdmin</name>
-    <version>1.2</version>
+    <version>1.4</version>
     <publisher>zuhn</publisher>
     <url>http://</url>
     <description>not specified</description>
@@ -38,12 +38,11 @@
             </dict>
         </plist>
     </ios>
-
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <tool-api-level>11</tool-api-level>
         <manifest android:versionCode="101" android:versionName="1.0.1">
             <application android:hardwareAccelerated="true"/>
-           <!-- <property name="ti.android.google.map.api.key">0nlWaW9F4TqyPYQO2auBKQzPvUkM-KGXeHPB0zg</property>-->
+            <!-- <property name="ti.android.google.map.api.key">0nlWaW9F4TqyPYQO2auBKQzPvUkM-KGXeHPB0zg</property>-->
         </manifest>
     </android>
     <mobileweb>
